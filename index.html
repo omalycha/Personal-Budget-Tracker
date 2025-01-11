@@ -1,0 +1,70 @@
+<!-- HTML File: index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Budget Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Personal Budget Tracker</h1>
+
+      <!-- Summary Section -->
+      <div class="summary">
+        <div>
+          <h3>Total Income</h3>
+          <p id="total-income">$0</p>
+        </div>
+        <div>
+          <h3>Total Expenses</h3>
+          <p id="total-expenses">$0</p>
+        </div>
+        <div>
+          <h3>Balance</h3>
+          <p id="balance">$0</p>
+        </div>
+      </div>
+
+      <!-- Add Transaction Form -->
+      <form class="form" id="transaction-form">
+        <input
+          type="text"
+          id="description"
+          placeholder="Description (e.g., Salary, Groceries)"
+          required
+        />
+        <input
+          type="number"
+          id="amount"
+          placeholder="Amount (e.g., +500, -100)"
+          required
+        />
+        <select id="category">
+          <option value="Income">Income</option>
+          <option value="Expense">Expense</option>
+        </select>
+        <button type="submit">Add Transaction</button>
+      </form>
+
+      <!-- Transaction List -->
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Description</th>
+            <th>Amount</th>
+            <th>Category</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="transaction-list">
+          <!-- Transactions will appear here -->
+        </tbody>
+      </table>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
